@@ -1,6 +1,7 @@
 package net.stein13.cbaalbanyjrotc;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -62,17 +63,39 @@ public class MainActivity extends ActionBarActivity
 
     public void onSectionAttached(int number) {
         switch (number) {
+            //  private String[] MenuArray = {"Search", "Brigade", "A Company", "B Company", "C Company", "D Company", "Gallery", "News"};
             case 1:
-                mTitle = getString(R.string.title_section1);
+                mTitle = "Search for Cadet";
+
                 break;
             case 2:
-                mTitle = getString(R.string.title_section2);
+                mTitle = "Brigade";
                 break;
             case 3:
-                mTitle = getString(R.string.title_section3);
+                mTitle = "A Company";
+                break;
+            case 4:
+                mTitle = "B Company";
+                break;
+            case 5:
+                mTitle = "C Company";
+                break;
+            case 6:
+                mTitle = "D Company";
+                break;
+            case 7:
+                mTitle = "Gallery";
+                break;
+            case 8:
+                mTitle = "News";
                 break;
         }
+        changeActivity(number);
     }
+    private void changeActivity(int x) {
+
+    }
+
 
     public void restoreActionBar() {
         ActionBar actionBar = getSupportActionBar();
