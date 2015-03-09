@@ -16,6 +16,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -48,6 +50,16 @@ public class MainActivity extends ActionBarActivity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+        WebView webView = (WebView) findViewById(R.id.webView);
+        webView.getSettings().setPluginState(WebSettings.PluginState.ON);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setJavaScriptCanOpenWindowsAutomatically(false);
+        webView.getSettings().setSupportMultipleWindows(false);
+        webView.getSettings().setSupportZoom(false);
+        webView.setVerticalScrollBarEnabled(false);
+        webView.setHorizontalScrollBarEnabled(false);
+
+
 
 
     }
@@ -62,37 +74,55 @@ public class MainActivity extends ActionBarActivity
     }
 
     public void onSectionAttached(int number) {
+        WebView webView = (WebView) findViewById(R.id.webView);
+        webView.getSettings().setPluginState(WebSettings.PluginState.ON);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setJavaScriptCanOpenWindowsAutomatically(false);
+        webView.getSettings().setSupportMultipleWindows(false);
+        webView.getSettings().setSupportZoom(false);
+        webView.setVerticalScrollBarEnabled(false);
+        webView.setHorizontalScrollBarEnabled(false);
         switch (number) {
             //  private String[] MenuArray = {"Search", "Brigade", "A Company", "B Company", "C Company", "D Company", "Gallery", "News"};
             case 1:
-                mTitle = "Search for Cadet";
-
+                mTitle = "Current News";
+                webView.loadUrl("https://mobile.twitter.com/cbaalbanyjrotc");
                 break;
             case 2:
                 mTitle = "Brigade";
+                webView.loadUrl("file:///android_asset/Brigade.html");
+
                 break;
             case 3:
-                mTitle = "A Company";
+                mTitle = "First Battalion";
+                webView.loadUrl("file:///android_asset/First.html");
                 break;
             case 4:
-                mTitle = "B Company";
+                mTitle = "Second Battalion";
+                webView.loadUrl("file:///android_asset/Second.html");
                 break;
             case 5:
-                mTitle = "C Company";
+                mTitle = "Band";
+                webView.loadUrl("file:///android_asset/Band.html");
                 break;
             case 6:
-                mTitle = "D Company";
+                mTitle = "Gallery";
+                webView.loadUrl("file:///android_asset/ComingSoon.html");
                 break;
             case 7:
-                mTitle = "Gallery";
-                break;
-            case 8:
-                mTitle = "News";
+                mTitle = "Search for Cadet";
+                webView.loadUrl("file:///android_asset/ComingSoon.html");
                 break;
         }
-        changeActivity(number);
+        setView(number);
     }
-    private void changeActivity(int x) {
+    public void setView(int id){
+
+
+    }
+
+
+    public void getArray(int i){
 
     }
 
@@ -165,6 +195,8 @@ public class MainActivity extends ActionBarActivity
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             return rootView;
         }
+
+
 
         @Override
         public void onAttach(Activity activity) {

@@ -33,8 +33,7 @@ public class NavigationDrawerFragment extends Fragment {
      * Remember the position of the selected item.
      */
     private static final String STATE_SELECTED_POSITION = "selected_navigation_drawer_position";
-    // Menu Array Definitions
-    private String[] MenuArray = {"Search", "Brigade", "A Company", "B Company", "C Company", "D Company", "Gallery", "News"};
+
     /**
      * Per the design guidelines, you should show the drawer on launch until the user manually
      * expands it. This shared preference tracks this.
@@ -102,7 +101,7 @@ public class NavigationDrawerFragment extends Fragment {
                 getActionBar().getThemedContext(),
                 android.R.layout.simple_list_item_activated_1,
                 android.R.id.text1,
-                MenuArray));
+                new String[]{"News", "Brigade", "First Battalion", "Second Battalion", "Band", "Gallery", "Search"}));
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
         return mDrawerListView;
     }

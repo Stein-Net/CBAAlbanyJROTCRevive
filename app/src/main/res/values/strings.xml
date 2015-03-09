@@ -8,7 +8,25 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_example">Example action</string>
+
 
     <string name="action_settings">Settings</string>
+
+    <string name="brigade_commander">Brigade Commander - C/COL Donald Vivian</string>
+    <string name="brigade_xo">Brigade Executive Officer - C/LTC Justin Decker</string>
+    <string name="brigade_s1">Brigade S-1 - C/MAJ Dustin Scaringe</string>
+    <string name="brigade_assist_s1">Brigade Assistant S-1 - C/CPT Dave Unser</string>
+    <string name="brigade_s3">Brigade S-3 C/LTC John Graham</string>
+    <string name="brigade_s4">Brigade S-4 - C/MAJ Seth Cline</string>
+    <string name="brigade_s2_s5">Brigade S-2/S-5 - C/CPT Matt Mahigian</string>
+    <string name="brigade_assist_s2_s5">Brigade Assistant S-2/S-5 C/MSG Gregory Rudolph</string>
+    <string name="brigade_csm">Brigade Command Sergeant Major - C/CSM James Avery</string>
+    <string name="brigade_chaplain">Brigade Chaplain - C/CPT Ben Anthony</string>
+    <string name="brigade_chaplain2">Brigade Chaplain - C/CPT Matt Hamel</string>
+    <string name="brigade_pro">Brigade Public Relations Officer C/CPT Lorenzo Horvath</string>
+    <string name="title_activity_brigade_view">Brigade</string>
+
+    <string name="hello_world">Hello world!</string>
+
+    <string name="action_example">Example action</string>
 </resources>
